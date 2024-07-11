@@ -32,7 +32,11 @@ Como base de dados do projeto, foi utilizado o PostegreSQL.
 - **Host:** jdbc:postgresql://aws-0-sa-east-1.pooler.supabase.com
 - **Porta:** 5432
 - **Database name:** postgres
-- **Caso não funcione** - recomendado uso do Docker, mudando as configurações no aplication.properties
+- **Caso não funcione o banco de dados em nuvem, siga as informações abaixo**
+1. recomendado uso do Docker, execute uma imagem do postgres
+2. mudando as configurações no aplication.properties
+   1. mudar o host,porta e colocar a senha escolhida
+   2. mudar a propriedade de: spring.jpa.hibernate.ddl-auto=update PARA: spring.jpa.hibernate.ddl-auto=drop-and-create
 
 ### informações de execução local
 1. Clone ou baixe o projeto em sua maquina,
